@@ -7,10 +7,10 @@ py = input("파이썬 점수를 입력해 주세요 : ")
 jsp = input("JSP 점수를 입력해 주세요 :")
 
 #총점 평균 구하기
-sum = kor+eng+mat+java+py+jsp
+sum = int(kor)+int(eng)+int(mat)+int(java)+int(py)+int(jsp)
 print("총점은 :",sum,"입니다.")
-avg = kor+eng+mat+java+py+jsp/6
-print("평균은 : ",avg,"입니다.")
+avg = sum/6
+print("평균은 : ",round(avg,2),"입니다.")
 #용돈 구하기
 # 90점이상 100000원
 if(avg>=90) :
