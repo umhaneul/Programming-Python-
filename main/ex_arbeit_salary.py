@@ -15,7 +15,6 @@ how_much = int(how_much)
 #2 주휴수당 계산
 if week_time >=15:
     week_time += (week_time/5)
-
 #3
 salary = int(week_time) * int(how_long) * int(how_much)
 print("알바비는 : ",salary)
