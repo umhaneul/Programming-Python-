@@ -14,8 +14,8 @@ class TicTacToe:
         self.board
         self.board[(row * 3) + col]
 
-        else:
-            print("빈칸이 아니에요. 제대로 잘 입력해요.")
+        #else:
+            #print("빈칸이 아니에요. 제대로 잘 입력해요.")
 
     #def get(self, row, col):
 
