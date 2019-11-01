@@ -5,7 +5,7 @@ class TicTacToe:
 
     def set(self, row, col):
         if self.get(row, col) == ".": #빈칸일 경우에만 말을 놓을 수 있도록하지
-        # self.board[(row * 3) + col] = self.current_turn
+         self.board[(row * 3) + col] = self.current_turn
         # if self.current_turn == "O" :
         #     self.current_turn == "X"
         # else :
@@ -19,26 +19,19 @@ class TicTacToe:
     def check_winner(self):
         check = self.current_turn
         #가로 -
-        if self.get(0,0) == self.get(0,1) == self.get(0,2) == check:
-            return check
-        if self.get(0,0) == self.get(1,1) == self.get(1,2) == check:
-            return check
-        if self.get(2,0) == self.get(2,1) == self.get(2,2) == check:
-            return check
-
+        for i in range(3):
+            if self.get(i,0) == self.get(i,1) == self.get(i,2) == check:
+                return check
         #수직
+            if self.get(0,i) == self.get(1,i) == self.get(2,i) ==  check:
+                return check
+
+        if self.get(0,0) == self.get(1,1) ==  self.get(2,2) == check :
+            return check
         if self.get(0,0,) == self.get(1.0) == self.get ==(2,0) == check:
-        if self.get(0, 0) == self.get(1, 1) == self.get(1,2) == check:
-            return check
-        if self.get(2, 0) == self.get(2, 1) == self.get(2, 2) == check:
-            return check
 
-    if self.get(0,0) == self.get(1,1) = self.get(2,2) == check :
-        return check
-    if self.get(0,0,) == self.get(1.0) == self.get ==(2,0) == check:
-
-    #무승부 if"." islef.board:
-        return "d"
+        #무승부 if"." islef.board:
+            return "d"
 
     def __str__(self):
         s = ""
