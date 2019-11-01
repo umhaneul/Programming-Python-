@@ -12,10 +12,15 @@ class TicTacToe:
         #     self.current_turn = "O"
         self.current_turn = "X" if self.current_turn == "O" else "O"
         self.board
-
-    def get(self, row, col):
         self.board[(row * 3) + col]
 
+        else:
+            print("빈칸이 아니에요. 제대로 잘 입력해요.")
+
+    #def get(self, row, col):
+
+
+    @property
     def check_winner(self):
         check = self.current_turn
         #가로 -
@@ -23,12 +28,12 @@ class TicTacToe:
             if self.get(i,0) == self.get(i,1) == self.get(i,2) == check:
                 return check
         #수직
-            if self.get(0,i) == self.get(1,i) == self.get(2,i) ==  check:
-                return check
+        if self.get(0,i) == self.get(1,i) == self.get(2,i) ==  check:
+            return check
 
         if self.get(0,0) == self.get(1,1) ==  self.get(2,2) == check :
             return check
-        if self.get(0,0,) == self.get(1.0) == self.get ==(2,0) == check:
+        if self.get(0,0) == self.get(1.0) == self.get == (2,0) == check:
 
         #무승부 if"." islef.board:
             return "d"
