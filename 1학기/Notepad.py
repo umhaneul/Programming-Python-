@@ -69,4 +69,4 @@ if __name__ == '__main__' :
         s = input("다시 입력해 주세요 : ")
         if s==in_str:
             root = Tk()
-            UserMyEdit(root).mainloop()
+            #UserMyEdit(root).mainloop()
