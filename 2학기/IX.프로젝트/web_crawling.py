@@ -16,7 +16,7 @@ if __name__=='__main__':
     html = "<html><head><meta charset='utf-8'></head><body>"    #utf-8
     for title in cartoon_titles:
         t = title.find("a").text    #제목 가져오자
-        link = title.find("a").get("href")
+        link = title.find("a").get("href")  #링크 가져오자
         link = "http://comic.naver.com/"+link
         print(t)
         print(link)
