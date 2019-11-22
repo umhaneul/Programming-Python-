@@ -13,17 +13,17 @@ class User(Frame):
 
     def createWidgets(self):#파일에 들어가는 메뉴 추가해주기
         self.menubar=Menu(self)
-        
+
         self.master.config(menu=self.menubar)
 
         file = Menu(self.menubar)
         file.add_command(label='새로 만들기', command=self.onNew)
         file.add_command(label='열기', command=self.onOpen)
         file.add_command(label='저장', command=self.onSave)
-        file.add_separator()
+        # file.add_separator()
         file.add_command(label='끝내기', command=self.onExit)
         self.menubar.add_cascade(label='파일', menu=file)
-        
+
         self.text=tbox=Text(self, relief=SUNKEN)
         sbar=Scrollbar(self)#스크롤바 생성
         sbar.config(command=tbox.yview)#스크롤바가 움직일때 실행 메서드
@@ -36,37 +36,37 @@ class User(Frame):
         self.file=None
         self.text.delete('1.0', END)
         self.master.title('메모장')
-    
+
     def onOpen(self):#열기 함수
         f = open(self.fileName, mode='rt', encoding='utf-8')
         op = f.read()
         self.text.delete(1.0,END)
         self.text.insert(END,op)
-      
+
     def onSave(self):#저장 함수
         f = open(self.fileName, mode='wt',encoding="utf-8")
         f.write(self.text.get('1.0',END))
         f.close()
-       
+
     def onExit(self):#닫기 함수
         self.root.destroy()
         self.root.quit()
 
 if __name__ == '__main__' : 
-    in_str = input("비밀번호를 입력해 주세요:\n")
-
-    a_str = input("다시 한번 입력해 주세요: ")
-
-    if in_str==a_str:
-        b = str(input("메모장을 실행하시겠습니까?(y/n):"))
-        if 'y' or 'Y' :
+    # in_str = input("비밀번호를 입력해 주세요:\n")
+    #
+    # a_str = input("다시 한번 입력해 주세요: ")
+    #
+    # if in_str==a_str:
+    #     b = str(input("메모장을 실행하시겠습니까?(y/n):"))
+    #     if 'y' or 'Y' :
             root = Tk()#Tk클래스 객체(root)생성
             User(root).mainloop()# mainloop()메서도 호출
-        elif 'n' or 'N' :
-            pass
-
-    else:
-        s = input("다시 입력해 주세요 : ")
-        if s==in_str:
-            root = Tk()
-            #UserMyEdit(root).mainloop()
+    #     elif 'n' or 'N' :
+    #         pass
+    #
+    # else:
+    #     s = input("다시 입력해 주세요 : ")
+    #     if s==in_str:
+    #         root = Tk()
+    #         #UserMyEdit(root).mainloop()
