@@ -1,5 +1,6 @@
-#터미널 > pip install bs4
-#터미널 >pip install lxml
+#터미널 > pip install bs4 -> File > Settings... > Project... > Project interpreter > + > beautifulsoup4 > Install Package
+#터미널 >pip install lxml -> File > Settings... > Project... > Project interpreter > + > lxml > Install Package
+#pip install lxml
 
 from bs4 import BeautifulSoup   #html 구조적으로 변환하자  alt+shift+enter
 from urllib.request import urlopen #url에 해당하는 html 가져오자
